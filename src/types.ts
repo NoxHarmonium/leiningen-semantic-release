@@ -1,7 +1,6 @@
 import { either } from "fp-ts/lib/Either";
 import { lstatSync } from "fs";
 import * as t from "io-ts";
-import { withFallback } from "io-ts-types/lib/withFallback";
 import { Context } from "semantic-release";
 
 const directoryPathCodec = new t.Type<string, string, unknown>(
@@ -18,13 +17,14 @@ const directoryPathCodec = new t.Type<string, string, unknown>(
 
 export type DirectoryPath = t.TypeOf<typeof directoryPathCodec>;
 
-export const pluginConfigCodec = t.type({
-  skipDeploy: withFallback(t.boolean, true),
+export const optionalPluginConfigCodec = t.partial({
+  skipDeploy: t.boolean,
   pkgRoot: directoryPathCodec,
-  uberJar: withFallback(t.boolean, false)
+  uberJar: t.boolean
 });
 
-export type PluginConfig = t.TypeOf<typeof pluginConfigCodec>;
+export type OptionalPluginConfig = t.TypeOf<typeof optionalPluginConfigCodec>;
+export type PluginConfig = Required<OptionalPluginConfig>;
 
 export type PluginStep = (
   config: PluginConfig,
