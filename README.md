@@ -1,134 +1,152 @@
-# maven-semantic-release
+Note: Currently in testing, not ready for use
 
-Automated release management for maven projects
+# leiningen-semantic-release
 
-## About
+[**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [leiningen](https://github.com/technomancy/leiningen) project.
 
-maven-semantic-release is a plugin for [semantic-release](https://github.com/semantic-release/semantic-release) v15.  This project will deploy a maven project to maven central instead of deploying a node.js project to npm.  This tool is intended to be used on github projects that use a Travis-CI server.
+[![Greenkeeper badge](https://badges.greenkeeper.io/semantic-release/npm.svg)](https://greenkeeper.io/)
 
-The workflow this assumes is that your project will use [Angular-style commit messages](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type) (theoretically you could override this and use a different style) and only merge to master when you want to create a new release.  When a new release is generated, it will automatically be deployed to maven central.
+[![npm latest version](https://img.shields.io/npm/v/noxharmonium/leiningen-semantic-release/latest.svg)](https://www.npmjs.com/package/noxharmonium/leiningen-semantic-release)
+[![npm next version](https://img.shields.io/npm/v/noxharmonium/leiningen-semantic-release/next.svg)](https://www.npmjs.com/package/noxharmonium/leiningen-semantic-release)
 
-Optionally, you can also use this enable this tool to create and push some commits and then merge those back into the development branch of your git repository.
+| Step               | Description                                                                                                                                   |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `verifyConditions` | Verify the presence of the `NPM_TOKEN` environment variable, create or update the `.npmrc` file with the token and verify the token is valid. |
+| `prepare`          | Update the `project.clj` version and [create](https://docs.npmjs.com/cli/pack) the npm package tarball.                                       |
+| `publish`          | [Publish the npm package](https://docs.npmjs.com/cli/publish) to the registry.                                                                |
 
-## Setup
+## Install
 
-This tool is intended to automate the releases of maven projects to maven central.  However, a lot of manual steps unfortunately must be taken to get your maven project setup so it can work properly.  Big thanks to Nathan Fischer for detailing how to do a lot of these steps in a blog post [here](http://www.debonair.io/post/maven-cd/).
-
-If your project merely wants to take advantage of committing version numbers and creating nice release notes on your github project, you can skip steps 1-4.  In step 5, the creation of the maven artifact signing key can be skipped and the `skip-maven-deploy` flag must be set.
-
-### Step 1: Setup an account with OSSRH
-
-Follow [this guide](http://central.sonatype.org/pages/ossrh-guide.html#initial-setup).
-
-### Step 2:  Make sure your pom.xml file is ready to be released
-
-<span style="font-size:larger;">[See this example project for a sample pom.xml](https://github.com/evansiroky/maven-semantic-release-example/blob/master/pom.xml).</span>
-
-Your maven project needs to have at least the following items in your pom.xml:
-
-- `name` - the name of the project
-- `description` - a short description
-- `url` - location where users can go to get more information about the library
-- `licences` - self explanatory
-- `scm` - source control information
-- `developers` - who worked on the project
-- `distributionManagement` - the places where you want to distribute your project to
-
-#### Plugins
-
-Your pom.xml file needs to have the following maven plugins included:
-
-- `maven-gpg-plugin`
-- `maven-javadoc-plugin`
-- `maven-source-plugin`
-
-Your pom.xml file also needs the following sonatype plugin to automatically close and release your project from nexus.
-
-- `nexus-staging-maven-plugin`
-
-<span style="font-size:larger;">[See this example project for a sample pom.xml](https://github.com/evansiroky/maven-semantic-release-example/blob/master/pom.xml).</span>
-
-### Step 3: Create a maven-settings.xml file
-
-You can copy paste [this file](https://github.com/evansiroky/maven-semantic-release-example/blob/master/maven-settings.xml) into your repository.  The file must be called `maven-settings.xml` and must exist in the root directory of your project.
-
-### Step 4: Create gpg keys to sign your artifact
-
-Follow the all steps from `Create code signing cert` to `Encrypt cert and variables for travis` in [this guide](http://www.debonair.io/post/maven-cd/#create-code-signing-cert:a547b4a31e9ae1ba41fe3873843c9208).  When adding keys to Travis you could also add them using the Travis-CI website in the settings of your repository instead of adding secure variables to your .travis.yml file.  
-
-We wish you good luck as this step is really easy to mess up and get exactly right.  Adding your password to travis can be infuriating as you may need to escape parts of it if it has a space, @ symbol or something else.
-
-### Step 5:  Create a .travis.yml file that'll run maven-semantic-release after success
-
-See this [example file](https://github.com/evansiroky/maven-semantic-release-example/blob/master/.travis.yml).  In your `.travis.yml` file you'll want the following items:
-
-#### after_success
-
-After the success of your CI Run, you'll want to run semantic-release with the maven-semantic-release plugins.  At a minimum, you must include the following recommended configuration.  This includes overriding the plugins so that the default npm plugin is not used.
-
-```
-after_success:
-  - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github,@conveyal/maven-semantic-release --verify-release @conveyal/maven-semantic-release
+```bash
+$ npm install leiningen-semantic-release -D
 ```
 
-If you want to enable the Conveyal workflow of making commits of the release version, snapshot version and then merging master into dev, use this configuration:
+## Usage
 
-```
-after_success:
-  - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github,@conveyal/maven-semantic-release --verify-release @conveyal/maven-semantic-release --use-conveyal-workflow --dev-branch=dev
-```
+The plugin can be configured in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration):
 
-It is also possible to skip deploying to maven central, but still incrementing the version in pom.xml by setting the flag `skip-maven-deploy`.  For example:
-
-```
-after_success:
-  - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github,@conveyal/maven-semantic-release --verify-release @conveyal/maven-semantic-release --use-conveyal-workflow --dev-branch=dev --skip-maven-deploy
-```
-
-By default the commit message contains the appendix '[ci skip]' that skips the pipeline to run when the pom.xml is pushed. This can be disabled for snapshot and final versions if needed by providing the flag `disable-snapshot-skip-ci` or  `disable-final-skip-ci`. For example:
-
-```
-after_success:
-  - semantic-release --prepare @conveyal/maven-semantic-release --publish @semantic-release/github,@conveyal/maven-semantic-release --verify-conditions @semantic-release/github,@conveyal/maven-semantic-release --verify-release @conveyal/maven-semantic-release --use-conveyal-workflow --dev-branch=dev --disable-snapshot-skip-ci --disable-final-skip-ci
+```json
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "leiningen-semantic-release"
+  ]
+}
 ```
 
-#### before_install
+## Configuration
 
-Be sure to include the import of your signing keys.  If you followed everything correctly in step 4 you should have something like the following added to your .travis.yml file:
+### Npm registry authentication
 
-```
-before_install: |
-  # only install signing keys under the same circumstances we do a mvn deploy later
-  if [[ "$TRAVIS_PULL_REQUEST" = false ]] && [[ "$TRAVIS_BRANCH" = master ]]; then
-    openssl aes-256-cbc -K $encrypted_### -iv $encrypted_### -in maven-artifact-signing-key.asc.enc -out maven-artifact-signing-key.asc -d
-    gpg --import --batch maven-artifact-signing-key.asc
-  fi
-```
+The npm authentication configuration is **required** and can be set via [environment variables](#environment-variables).
 
-#### cache:
+Both the [token](https://docs.npmjs.com/getting-started/working_with_tokens) and the legacy (`username`, `password` and `email`) authentication are supported. It is recommended to use the [token](https://docs.npmjs.com/getting-started/working_with_tokens) authentication. The legacy authentication is supported as the alternative npm registries [Artifactory](https://www.jfrog.com/open-source/#os-arti) and [npm-registry-couchapp](https://github.com/npm/npm-registry-couchapp) only supports that form of authentication.
 
-This should help speed up the installation of maven-semantic-release.  You'll want to include the m2 directory as well.
+**Note**: Only the `auth-only` [level of npm two-factor authentication](https://docs.npmjs.com/getting-started/using-two-factor-authentication#levels-of-authentication) is supported, **semantic-release** will not work with the default `auth-and-writes` level.
 
-```
-cache:
-  directories:
-    - $HOME/.m2
-    - $HOME/.yarn-cache
-```
+### Environment variables
 
-Also, you'll want to install maven-semantic-release and semantic-release in a step before the build because travis caches immediately after the build.
+| Variable          | Description                                                                                                                    |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `LEIN_USERNAME`   | The username for the maven repository you are publishing to (or clojars).                                                      |
+| `LEIN_PASSWORD`   | The password for the maven repository you are publishing to (or clojars). Usually mutually exclusive to `LEIN_PASSPHRASE`.     |
+| `LEIN_PASSPHRASE` | The GPG passphrase for the maven repository you are publishing to (or clojars). Usually mutually exclusive to `LEIN_PASSWORD`. |
+
+As mentioned in the [leiningen documentation](https://github.com/technomancy/leiningen/blob/stable/doc/DEPLOY.md#credentials-in-the-environment),
+your `:deploy-repositories` section of `project.clj` should be set up to use environment variables.
+
+For example:
 
 ```
-before_script:
-  - yarn global add @conveyal/maven-semantic-release semantic-release@15
+:deploy-repositories [["releases" {:url "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+                                   :username :env
+                                   :password :env}
+                       "snapshots" {:url "https://oss.sonatype.org/content/repositories/snapshots/"
+                                    :username :env
+                                    :passphrase :env}]]
 ```
 
-### Step 6:  Add a github token to Travis
+### Options
 
-Create a Github token that will be used to make commits and create releases.  Add the token to your travis environment variables as either `GH_TOKEN` or `GITHUB_TOKEN`.  Add the following permissions to your token:
+| Options      | Description                                                                                                                      | Default |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `skipDeploy` | Whether to publish the package to ta respository with `lein deploy`. If `false` the `project.clj` version will still be updated. | `true`  |
+| `pkgRoot`    | Directory path to publish.                                                                                                       | `.`     |
+| `uberJar`    | Whether to package the project as an uber jar (include dependencies in the jar)                                                  | `false` |
 
-<img src="https://raw.githubusercontent.com/conveyal/maven-semantic-release/master/github-token-example.png" />
+**Note**: The `pkgRoot` directory must contains a `project.clj`. The version will be updated only in the `project.clj` within the `pkgRoot` directory.
 
-## Which `mvn` will be used
+**Note**: If you use a [shareable configuration](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/shareable-configurations.md#shareable-configurations) that defines one of these options you can set it to `false` in your [**semantic-release** configuration](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration) in order to use the default value.
 
-This plugin uses the `mvn` command in your `PATH`. If you have [maven-wrapper script](https://github.com/takari/maven-wrapper) at the project root directory, this plugin will use that instead.
+### Npm configuration
+
+The plugin uses the [`npm` CLI](https://github.com/npm/cli) which will read the configuration from [`.npmrc`](https://docs.npmjs.com/files/npmrc). See [`npm config`](https://docs.npmjs.com/misc/config) for the option list.
+
+The [`registry`](https://docs.npmjs.com/misc/registry) and [`dist-tag`](https://docs.npmjs.com/cli/dist-tag) can be configured in the `package.json` and will take precedence over the configuration in `.npmrc`:
+
+```json
+{
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  }
+}
+```
+
+### Examples
+
+The `npmPublish` and `tarballDir` option can be used to skip the publishing to the `npm` registry and instead, release the package tarball with another plugin. For example with the [@semantic-release/github](https://github.com/semantic-release/github) plugin:
+
+```json
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false,
+        "tarballDir": "dist"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": "dist/*.tgz"
+      }
+    ]
+  ]
+}
+```
+
+When publishing from a sub-directory with the `pkgRoot` option, the `package.json` and `npm-shrinkwrap.json` updated with the new version can be moved to another directory with a `postpublish` [npm script](https://docs.npmjs.com/misc/scripts). For example with the [@semantic-release/git](https://github.com/semantic-release/git) plugin:
+
+```json
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "dist"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["package.json", "npm-shrinkwrap.json"]
+      }
+    ]
+  ]
+}
+```
+
+```json
+{
+  "scripts": {
+    "postpublish": "cp -r dist/package.json . && cp -r dist/npm-shrinkwrap.json ."
+  }
+}
+```

@@ -1,33 +1,52 @@
 {
-  "name": "@conveyal/maven-semantic-release",
-  "version": "0.0.0-development",
-  "description": "Automated release management for maven projects",
-  "main": "index.js",
-  "author": "evansiroky <evan.siroky@yahoo.com>",
+  "name": "leiningen-semantic-release",
+  "version": "1.0.0",
+  "description": "Automated release management for leiningen projects",
+  "main": "dist/main.js",
+  "author": "Sean Dawson <contact@seandawson.info>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "mastarm lint lib",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "lint-fix": "tslint --fix -p tsconfig.json -c tslint.json",
+    "format-check": "prettier-check src/**/*",
+    "type-coverage": "type-coverage --strict --detail --ignore-catch",
+    "format": "prettier --write '{src,test}/**/*.{ts,tsx}'"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/conveyal/maven-semantic-release.git"
+    "url": "https://github.com/noxharmonium/leiningen-semantic-release.git"
   },
   "dependencies": {
     "@semantic-release/error": "^2.2.0",
-    "aggregate-error": "^1.0.0",
-    "execa": "^0.10.0",
-    "fs-extra": "^5.0.0",
-    "got": "^8.0.1",
-    "semver": "^5.5.0",
-    "xml2js-es6-promise": "^1.1.1"
+    "execa": "^2.0.4",
+    "fp-ts": "^2.0.5",
+    "io-ts": "^2.0.1",
+    "io-ts-types": "^0.5.1",
+    "semver": "^6.3.0"
   },
   "devDependencies": {
-    "mastarm": "^5.1.3",
-    "semantic-release": "^15.12.3"
+    "@types/semantic-release": "^15.13.0",
+    "@types/semver": "^6.0.2",
+    "cz-conventional-changelog": "3.0.2",
+    "prettier": "^1.18.2",
+    "prettier-check": "^2.0.0",
+    "semantic-release": "^15.13.24",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-immutable": "^6.0.1",
+    "tslint-sonarts": "^1.9.0",
+    "type-coverage": "^2.3.0",
+    "typescript": "^3.6.3"
   },
   "peerDependencies": {
-    "semantic-release": "^15.12.3"
+    "semantic-release": "^15.13.24"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
