@@ -2,11 +2,12 @@
   "name": "leiningen-semantic-release",
   "version": "1.0.0",
   "description": "Automated release management for leiningen projects",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "author": "Sean Dawson <contact@seandawson.info>",
   "license": "MIT",
   "private": false,
   "scripts": {
+    "prepare": "tsc",
     "semantic-release": "semantic-release",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "lint-fix": "tslint --fix -p tsconfig.json -c tslint.json",
@@ -24,11 +25,13 @@
     "fp-ts": "^2.0.5",
     "io-ts": "^2.0.1",
     "io-ts-types": "^0.5.1",
+    "monocle-ts": "^2.0.0",
     "semver": "^6.3.0"
   },
   "devDependencies": {
     "@types/semantic-release": "^15.13.0",
     "@types/semver": "^6.0.2",
+    "commitizen": "^4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "prettier": "^1.18.2",
     "prettier-check": "^2.0.0",
