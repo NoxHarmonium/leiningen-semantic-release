@@ -18,7 +18,7 @@ export const updateVersionInLeinProject = async (
   const version = nextRelease.version;
   logger.log(`Updating project.clj to version ${version}`);
   const command = await findCommand();
-  return exec(command, ["change", "version", "set", `'"${version}"'`], pkgRoot);
+  return exec(command, ["change", "version", "set", `"${version}"`], pkgRoot);
 };
 
 export const deploy = async (
