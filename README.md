@@ -9,11 +9,11 @@ Note: Currently in testing, not ready for use
 [![npm latest version](https://img.shields.io/npm/v/noxharmonium/leiningen-semantic-release/latest.svg)](https://www.npmjs.com/package/noxharmonium/leiningen-semantic-release)
 [![npm next version](https://img.shields.io/npm/v/noxharmonium/leiningen-semantic-release/next.svg)](https://www.npmjs.com/package/noxharmonium/leiningen-semantic-release)
 
-| Step               | Description                                                                                                                                   |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `verifyConditions` | Verify the presence of the `NPM_TOKEN` environment variable, create or update the `.npmrc` file with the token and verify the token is valid. |
-| `prepare`          | Update the `project.clj` version and [create](https://docs.npmjs.com/cli/pack) the npm package tarball.                                       |
-| `publish`          | [Publish the npm package](https://docs.npmjs.com/cli/publish) to the registry.                                                                |
+| Step               | Description                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| `verifyConditions` | Checks the `project.clj` is syntactically valid.                                   |
+| `prepare`          | Update the `project.clj` version and package the output jar file.                  |
+| `publish`          | Publish the jar (and generated Maven metadata) to a maven repository (or clojars). |
 
 ## Install
 
