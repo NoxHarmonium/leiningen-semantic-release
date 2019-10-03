@@ -27,6 +27,7 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
+    "leiningen-semantic-release",
     "@semantic-release/git",
     {
       "assets": ["project.clj"]
