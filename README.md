@@ -63,7 +63,7 @@ For example to use `LEIN_USERNAME` and `LEIN_PASSWORD` your config might look li
                                    :password :env}
                        "snapshots" {:url "https://oss.sonatype.org/content/repositories/snapshots/"
                                     :username :env
-                                    :passphrase :env}]]
+                                    :password :env}]]
 ```
 
 If you want retrieve the username and password from gpg, you can set the `LEIN_PASSPHRASE` environment variable
@@ -77,6 +77,11 @@ and use config like the following.
                                     :creds :gpg
                                     :passphrase :env}]]
 ```
+
+The [example project](https://github.com/NoxHarmonium/leiningen-semantic-release-test-clojars) shows an example of
+how to get signing working properly using environment variables on CircleCI.
+
+It techniques used there should apply to most build environments running on Linux.
 
 ### Options
 
