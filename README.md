@@ -4,9 +4,7 @@
 
 [![CircleCI](https://circleci.com/gh/NoxHarmonium/leiningen-semantic-release.svg?style=svg)](https://circleci.com/gh/NoxHarmonium/leiningen-semantic-release)
 [![Greenkeeper badge](https://badges.greenkeeper.io/NoxHarmonium/leiningen-semantic-release.svg)](https://greenkeeper.io/)
-
-[![npm latest version](https://img.shields.io/npm/v/noxharmonium/leiningen-semantic-release/latest.svg)](https://www.npmjs.com/package/noxharmonium/leiningen-semantic-release)
-[![npm next version](https://img.shields.io/npm/v/noxharmonium/leiningen-semantic-release/next.svg)](https://www.npmjs.com/package/noxharmonium/leiningen-semantic-release)
+![npm](https://img.shields.io/npm/v/leiningen-semantic-release)
 
 | Step               | Description                                                                        |
 | ------------------ | ---------------------------------------------------------------------------------- |
@@ -76,3 +74,7 @@ For example:
 **Note**: The `pkgRoot` directory must contains a `project.clj`. The version will be updated only in the `project.clj` within the `pkgRoot` directory.
 
 **Note**: If you use a [shareable configuration](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/shareable-configurations.md#shareable-configurations) that defines one of these options you can set it to `false` in your [**semantic-release** configuration](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration) in order to use the default value.
+
+### Example
+
+There is an example project at: https://github.com/NoxHarmonium/leiningen-semantic-release-test-clojars
