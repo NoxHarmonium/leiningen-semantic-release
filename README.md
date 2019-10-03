@@ -37,7 +37,7 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
 
 ## Configuration
 
-### Npm registry authentication
+### Registry authentication
 
 ### Environment variables
 
@@ -67,7 +67,7 @@ For example:
 
 | Options      | Description                                                                                                                      | Default |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `skipDeploy` | Whether to publish the package to ta respository with `lein deploy`. If `false` the `project.clj` version will still be updated. | `true`  |
+| `skipDeploy` | Whether to publish the package to a respository with `lein deploy`. If `true` the `project.clj` version will still be updated.   | `true`  |
 | `pkgRoot`    | Directory path to publish.                                                                                                       | `.`     |
 | `uberJar`    | Whether to package the project as an uber jar (include dependencies in the jar)                                                  | `false` |
 
