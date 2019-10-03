@@ -40,27 +40,41 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
 
 ### Registry authentication
 
-### Environment variables
+Authenticating with the registry is configured using the `:deploy-repositories` map in `project.clj`.
 
-| Variable          | Description                                                                       |
-| ----------------- | --------------------------------------------------------------------------------- |
-| `LEIN_USERNAME`   | The username for the maven repository you are publishing to (or clojars).         |
-| `LEIN_PASSWORD`   | The password for the maven repository you are publishing to (or clojars).         |
-| `LEIN_PASSPHRASE` | The GPG passphrase to unlock the GPG keyring your signing key is in (or clojars). |
+The recommended way to pass these variables in isby using environment variables.
+
+#### Environment variables
+
+| Variable          | Description                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------ |
+| `LEIN_USERNAME`   | The username for the maven repository you are publishing to (or clojars).                  |
+| `LEIN_PASSWORD`   | The password for the maven repository you are publishing to (or clojars).                  |
+| `LEIN_PASSPHRASE` | A gpg passphrase to retreive the username and password with. (if using gpg credentials)    |
 
 As mentioned in the [leiningen documentation](https://github.com/technomancy/leiningen/blob/stable/doc/DEPLOY.md#credentials-in-the-environment),
 your `:deploy-repositories` section of `project.clj` should be set up to use environment variables.
 
-For example:
+For example to use `LEIN_USERNAME` and `LEIN_PASSWORD` your config might look like this.
 
 ```
 :deploy-repositories [["releases" {:url "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
                                    :username :env
-                                   :password :env
-                                   :passphrase :env}
+                                   :password :env}
                        "snapshots" {:url "https://oss.sonatype.org/content/repositories/snapshots/"
                                     :username :env
-                                    :passphrase :env
+                                    :passphrase :env}]]
+```
+
+If you want retrieve the username and password from gpg, you can set the `LEIN_PASSPHRASE` environment variable
+and use config like the following.
+
+```
+:deploy-repositories [["releases" {:url "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+                                   :creds :gpg
+                                   :passphrase :env}
+                       "snapshots" {:url "https://oss.sonatype.org/content/repositories/snapshots/"
+                                    :creds :gpg
                                     :passphrase :env}]]
 ```
 
