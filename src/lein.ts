@@ -1,17 +1,12 @@
-import { access, constants } from "fs";
 import { Context } from "semantic-release";
-import { promisify } from "util";
 import { PluginConfig } from "./types";
 import { exec } from "./util";
 
-const accessAsync = promisify(access);
-
 /**
- * Checks that the lein executable is accessible.
+ * Gets the path to the "lein" executable.
  * Could be extended in the future to try different locations.
  */
-const findCommand = async () =>
-  accessAsync("lein", constants.F_OK).then(() => "lein");
+const findCommand = async () => "lein"
 
 export const updateVersionInLeinProject = async (
   { pkgRoot }: PluginConfig,
