@@ -12,7 +12,6 @@ import {
   PluginStep
 } from "./src/types";
 import { verifyConditionsStep } from "./src/verify-conditions";
-import { verifyReleaseStep } from "./src/verify-release";
 
 const resolveOptionals = ({
   skipDeploy,
@@ -44,13 +43,7 @@ const wrapStep = (step: PluginStep) => async (
 const wrappedSteps = {
   prepare: wrapStep(prepareStep),
   publish: wrapStep(publishStep),
-  verifyConditions: wrapStep(verifyConditionsStep),
-  verifyRelease: wrapStep(verifyReleaseStep)
+  verifyConditions: wrapStep(verifyConditionsStep)
 };
 
-export const {
-  prepare,
-  publish,
-  verifyConditions,
-  verifyRelease
-} = wrappedSteps;
+export const { prepare, publish, verifyConditions } = wrappedSteps;
