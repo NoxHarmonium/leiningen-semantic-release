@@ -42,15 +42,15 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
 
 Authenticating with the registry is configured using the `:deploy-repositories` map in `project.clj`.
 
-The recommended way to pass these variables in isby using environment variables.
+The recommended way to pass these variables in is by using environment variables.
 
 #### Environment variables
 
-| Variable          | Description                                                                                |
-| ----------------- | ------------------------------------------------------------------------------------------ |
-| `LEIN_USERNAME`   | The username for the maven repository you are publishing to (or clojars).                  |
-| `LEIN_PASSWORD`   | The password for the maven repository you are publishing to (or clojars).                  |
-| `LEIN_PASSPHRASE` | A gpg passphrase to retreive the username and password with. (if using gpg credentials)    |
+| Variable          | Description                                                                                       |
+| ----------------- | ------------------------------------------------------------------------------------------------- |
+| `LEIN_USERNAME`   | The username for the maven repository you are publishing to (or clojars).                         |
+| `LEIN_PASSWORD`   | The password for the maven repository you are publishing to (or clojars).                         |
+| `LEIN_PASSPHRASE` | A gpg passphrase to retreive the username and password with. (if retreiving credentials from gpg) |
 
 As mentioned in the [leiningen documentation](https://github.com/technomancy/leiningen/blob/stable/doc/DEPLOY.md#credentials-in-the-environment),
 your `:deploy-repositories` section of `project.clj` should be set up to use environment variables.
