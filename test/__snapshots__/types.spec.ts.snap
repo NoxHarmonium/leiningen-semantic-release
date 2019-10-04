@@ -1,391 +1,342 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`when parsing config when the config is invalid parse { pkgRoot: './README.md' } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "pkgRoot": "./README.md",
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
-              "decode": [Function],
-              "encode": [Function],
-              "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
-              "validate": [Function],
-            },
-          },
-          Object {
-            "actual": "./README.md",
-            "key": "pkgRoot",
-            "type": Type {
+        "actual": Object {
+          "pkgRoot": "./README.md",
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
               "name": "DirectoryPath",
               "validate": [Function],
             },
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
           },
-        ],
-        "message": "not a path to a valid directory",
-        "value": "./README.md",
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": "./README.md",
+        "key": "pkgRoot",
+        "type": Type {
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "DirectoryPath",
+          "validate": [Function],
+        },
       },
     ],
+    "message": "not a path to a valid directory",
+    "value": "./README.md",
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { pkgRoot: '/tmp/ishouldntexist' } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "pkgRoot": "/tmp/ishouldntexist",
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
-              "decode": [Function],
-              "encode": [Function],
-              "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
-              "validate": [Function],
-            },
-          },
-          Object {
-            "actual": "/tmp/ishouldntexist",
-            "key": "pkgRoot",
-            "type": Type {
+        "actual": Object {
+          "pkgRoot": "/tmp/ishouldntexist",
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
               "name": "DirectoryPath",
               "validate": [Function],
             },
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
           },
-        ],
-        "message": "Error: ENOENT: no such file or directory, lstat 'C:\\\\tmp\\\\ishouldntexist'",
-        "value": "/tmp/ishouldntexist",
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": "/tmp/ishouldntexist",
+        "key": "pkgRoot",
+        "type": Type {
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "DirectoryPath",
+          "validate": [Function],
+        },
       },
     ],
+    "message": "Erro ENOEN no such file or directory, lstat '/tmp/ishouldntexist'",
+    "value": "/tmp/ishouldntexist",
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { pkgRoot: 444 } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "pkgRoot": 444,
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
-              "decode": [Function],
-              "encode": [Function],
-              "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
-              "validate": [Function],
-            },
-          },
-          Object {
-            "actual": 444,
-            "key": "pkgRoot",
-            "type": Type {
+        "actual": Object {
+          "pkgRoot": 444,
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
               "name": "DirectoryPath",
               "validate": [Function],
             },
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
           },
-        ],
-        "message": undefined,
-        "value": 444,
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": 444,
+        "key": "pkgRoot",
+        "type": Type {
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "DirectoryPath",
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": 444,
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { pkgRoot: false } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "pkgRoot": false,
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
-              "decode": [Function],
-              "encode": [Function],
-              "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
-              "validate": [Function],
-            },
-          },
-          Object {
-            "actual": false,
-            "key": "pkgRoot",
-            "type": Type {
+        "actual": Object {
+          "pkgRoot": false,
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
               "name": "DirectoryPath",
               "validate": [Function],
             },
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
           },
-        ],
-        "message": undefined,
-        "value": false,
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": false,
+        "key": "pkgRoot",
+        "type": Type {
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "DirectoryPath",
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": false,
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { pkgRoot: null } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "pkgRoot": null,
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
-              "decode": [Function],
-              "encode": [Function],
-              "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
-              "validate": [Function],
-            },
-          },
-          Object {
-            "actual": null,
-            "key": "pkgRoot",
-            "type": Type {
+        "actual": Object {
+          "pkgRoot": null,
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
               "name": "DirectoryPath",
               "validate": [Function],
             },
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
           },
-        ],
-        "message": undefined,
-        "value": null,
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": null,
+        "key": "pkgRoot",
+        "type": Type {
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "DirectoryPath",
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": null,
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { skipDeploy: 'false' } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "skipDeploy": "false",
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
+        "actual": Object {
+          "skipDeploy": "false",
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
+              "name": "DirectoryPath",
               "validate": [Function],
             },
-          },
-          Object {
-            "actual": "false",
-            "key": "skipDeploy",
-            "type": BooleanType {
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
               "_tag": "BooleanType",
               "decode": [Function],
               "encode": [Function],
@@ -394,66 +345,60 @@ Object {
               "validate": [Function],
             },
           },
-        ],
-        "message": undefined,
-        "value": "false",
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": "false",
+        "key": "skipDeploy",
+        "type": BooleanType {
+          "_tag": "BooleanType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "boolean",
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": "false",
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { skipDeploy: 5656 } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "skipDeploy": 5656,
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
+        "actual": Object {
+          "skipDeploy": 5656,
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
+              "name": "DirectoryPath",
               "validate": [Function],
             },
-          },
-          Object {
-            "actual": 5656,
-            "key": "skipDeploy",
-            "type": BooleanType {
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
               "_tag": "BooleanType",
               "decode": [Function],
               "encode": [Function],
@@ -462,66 +407,60 @@ Object {
               "validate": [Function],
             },
           },
-        ],
-        "message": undefined,
-        "value": 5656,
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": 5656,
+        "key": "skipDeploy",
+        "type": BooleanType {
+          "_tag": "BooleanType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "boolean",
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": 5656,
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { skipDeploy: null } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "skipDeploy": null,
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
+        "actual": Object {
+          "skipDeploy": null,
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
+              "name": "DirectoryPath",
               "validate": [Function],
             },
-          },
-          Object {
-            "actual": null,
-            "key": "skipDeploy",
-            "type": BooleanType {
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
               "_tag": "BooleanType",
               "decode": [Function],
               "encode": [Function],
@@ -530,66 +469,60 @@ Object {
               "validate": [Function],
             },
           },
-        ],
-        "message": undefined,
-        "value": null,
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": null,
+        "key": "skipDeploy",
+        "type": BooleanType {
+          "_tag": "BooleanType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "boolean",
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": null,
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { uberJar: 'true' } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "uberJar": "true",
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
+        "actual": Object {
+          "uberJar": "true",
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
+              "name": "DirectoryPath",
               "validate": [Function],
             },
-          },
-          Object {
-            "actual": "true",
-            "key": "uberJar",
-            "type": BooleanType {
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
               "_tag": "BooleanType",
               "decode": [Function],
               "encode": [Function],
@@ -598,66 +531,60 @@ Object {
               "validate": [Function],
             },
           },
-        ],
-        "message": undefined,
-        "value": "true",
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": "true",
+        "key": "uberJar",
+        "type": BooleanType {
+          "_tag": "BooleanType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "boolean",
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": "true",
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { uberJar: 5656 } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "uberJar": 5656,
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
+        "actual": Object {
+          "uberJar": 5656,
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
+              "name": "DirectoryPath",
               "validate": [Function],
             },
-          },
-          Object {
-            "actual": 5656,
-            "key": "uberJar",
-            "type": BooleanType {
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
               "_tag": "BooleanType",
               "decode": [Function],
               "encode": [Function],
@@ -666,66 +593,60 @@ Object {
               "validate": [Function],
             },
           },
-        ],
-        "message": undefined,
-        "value": 5656,
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": 5656,
+        "key": "uberJar",
+        "type": BooleanType {
+          "_tag": "BooleanType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "boolean",
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": 5656,
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse { uberJar: null } 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": Object {
-              "uberJar": null,
-            },
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
+        "actual": Object {
+          "uberJar": null,
+        },
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
+              "name": "DirectoryPath",
               "validate": [Function],
             },
-          },
-          Object {
-            "actual": null,
-            "key": "uberJar",
-            "type": BooleanType {
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
               "_tag": "BooleanType",
               "decode": [Function],
               "encode": [Function],
@@ -734,215 +655,166 @@ Object {
               "validate": [Function],
             },
           },
-        ],
-        "message": undefined,
-        "value": null,
+          "validate": [Function],
+        },
+      },
+      Object {
+        "actual": null,
+        "key": "uberJar",
+        "type": BooleanType {
+          "_tag": "BooleanType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "boolean",
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": null,
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse null 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": null,
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
+        "actual": null,
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
+              "name": "DirectoryPath",
+              "validate": [Function],
+            },
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
               "validate": [Function],
             },
           },
-        ],
-        "message": undefined,
-        "value": null,
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": null,
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is invalid parse undefined 1`] = `
-Object {
-  "_tag": "Left",
-  "left": Object {
-    "_tag": "Left",
-    "left": Array [
+Array [
+  Object {
+    "context": Array [
       Object {
-        "context": Array [
-          Object {
-            "actual": undefined,
-            "key": "",
-            "type": PartialType {
-              "_tag": "PartialType",
+        "actual": undefined,
+        "key": "",
+        "type": PartialType {
+          "_tag": "PartialType",
+          "decode": [Function],
+          "encode": [Function],
+          "is": [Function],
+          "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
+          "props": Object {
+            "pkgRoot": Type {
               "decode": [Function],
               "encode": [Function],
               "is": [Function],
-              "name": "Partial<{ skipDeploy: boolean, pkgRoot: DirectoryPath, uberJar: boolean }>",
-              "props": Object {
-                "pkgRoot": Type {
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "DirectoryPath",
-                  "validate": [Function],
-                },
-                "skipDeploy": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-                "uberJar": BooleanType {
-                  "_tag": "BooleanType",
-                  "decode": [Function],
-                  "encode": [Function],
-                  "is": [Function],
-                  "name": "boolean",
-                  "validate": [Function],
-                },
-              },
+              "name": "DirectoryPath",
+              "validate": [Function],
+            },
+            "skipDeploy": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
+              "validate": [Function],
+            },
+            "uberJar": BooleanType {
+              "_tag": "BooleanType",
+              "decode": [Function],
+              "encode": [Function],
+              "is": [Function],
+              "name": "boolean",
               "validate": [Function],
             },
           },
-        ],
-        "message": undefined,
-        "value": undefined,
+          "validate": [Function],
+        },
       },
     ],
+    "message": undefined,
+    "value": undefined,
   },
-}
+]
 `;
 
 exports[`when parsing config when the config is valid parse { pkgRoot: '.' } 1`] = `
 Object {
-  "_tag": "Right",
-  "right": Object {
-    "_tag": "Right",
-    "right": Object {
-      "pkgRoot": ".",
-    },
-  },
+  "pkgRoot": ".",
 }
 `;
 
 exports[`when parsing config when the config is valid parse { pkgRoot: './src' } 1`] = `
 Object {
-  "_tag": "Right",
-  "right": Object {
-    "_tag": "Right",
-    "right": Object {
-      "pkgRoot": "./src",
-    },
-  },
+  "pkgRoot": "./src",
 }
 `;
 
 exports[`when parsing config when the config is valid parse { skipDeploy: false } 1`] = `
 Object {
-  "_tag": "Right",
-  "right": Object {
-    "_tag": "Right",
-    "right": Object {
-      "skipDeploy": false,
-    },
-  },
+  "skipDeploy": false,
 }
 `;
 
 exports[`when parsing config when the config is valid parse { skipDeploy: true } 1`] = `
 Object {
-  "_tag": "Right",
-  "right": Object {
-    "_tag": "Right",
-    "right": Object {
-      "skipDeploy": true,
-    },
-  },
+  "skipDeploy": true,
 }
 `;
 
 exports[`when parsing config when the config is valid parse { skipDeploy: true, uberJar: false, pkgRoot: './src' } 1`] = `
 Object {
-  "_tag": "Right",
-  "right": Object {
-    "_tag": "Right",
-    "right": Object {
-      "pkgRoot": "./src",
-      "skipDeploy": true,
-      "uberJar": false,
-    },
-  },
+  "pkgRoot": "./src",
+  "skipDeploy": true,
+  "uberJar": false,
 }
 `;
 
 exports[`when parsing config when the config is valid parse { uberJar: false } 1`] = `
 Object {
-  "_tag": "Right",
-  "right": Object {
-    "_tag": "Right",
-    "right": Object {
-      "uberJar": false,
-    },
-  },
+  "uberJar": false,
 }
 `;
 
 exports[`when parsing config when the config is valid parse { uberJar: true } 1`] = `
 Object {
-  "_tag": "Right",
-  "right": Object {
-    "_tag": "Right",
-    "right": Object {
-      "uberJar": true,
-    },
-  },
+  "uberJar": true,
 }
 `;
 
-exports[`when parsing config when the config is valid parse {} 1`] = `
-Object {
-  "_tag": "Right",
-  "right": Object {
-    "_tag": "Right",
-    "right": Object {},
-  },
-}
-`;
+exports[`when parsing config when the config is valid parse {} 1`] = `Object {}`;
