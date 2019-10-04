@@ -6,8 +6,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/NoxHarmonium/leiningen-semantic-release.svg)](https://greenkeeper.io/)
 [![codecov](https://codecov.io/gh/NoxHarmonium/leiningen-semantic-release/branch/master/graph/badge.svg)](https://codecov.io/gh/NoxHarmonium/leiningen-semantic-release)
 [![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2FNoxHarmonium%2Fleiningen-semantic-release%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
-
-![npm](https://img.shields.io/npm/v/leiningen-semantic-release))
+![npm](https://img.shields.io/npm/v/leiningen-semantic-release)
 
 | Step               | Description                                                                        |
 | ------------------ | ---------------------------------------------------------------------------------- |
