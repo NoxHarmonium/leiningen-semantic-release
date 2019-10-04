@@ -1,6 +1,6 @@
 {
   "name": "leiningen-semantic-release",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automated release management for leiningen projects",
   "main": "dist/index.js",
   "author": "Sean Dawson <contact@seandawson.info>",
