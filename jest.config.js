@@ -3,6 +3,8 @@ module.exports = {
   testEnvironment: 'node',
   collectCoverage: true,
   collectCoverageFrom: [
-    "src/**/*.ts"
-  ]
+    "src/**/*.ts",
+    "!src/**/*.d.ts",
+  ],
+  testRegex: ".*\.spec\.ts$"
 };
