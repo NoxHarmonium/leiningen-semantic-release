@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when executing an external process when printing version should print the version and name stored in package.json (mocked) 1`] = `"Running test name version test version"`;
+
+exports[`when executing an external process when running a successful command should return stdout as a trimmed string 1`] = `"hello from unit testing!"`;
+
+exports[`when executing an external process when using a different working directory should should execute command relative to that directory 1`] = `"'true'"`;
+
+exports[`when executing an external process when using a different working directory should should execute command relative to that directory 2`] = `"true"`;
+
+exports[`when executing an external process when using a different working directory should should execute command relative to that directory 3`] = `"true"`;
