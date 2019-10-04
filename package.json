@@ -16,6 +16,7 @@
     "type-coverage": "type-coverage --strict --detail --ignore-catch src",
     "format": "prettier --write '{src,test}/**/*.{ts,tsx}'",
     "test": "jest",
+    "codecov": "codecov",
     "check-all": "npm run format-check && npm run lint && npm run type-coverage && npm run test"
   },
   "repository": {
@@ -39,6 +40,7 @@
     "@types/jest": "^24.0.18",
     "@types/semantic-release": "^15.13.0",
     "@types/semver": "^6.0.2",
+    "codecov": "^3.6.1",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "jest": "^24.9.0",
