@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`when calling leiningen when calling lein wrapper methods when nextRelease is defined 'deploy' should call lein with the correct arguments 1`] = `
+Array [
+  "lein",
+  Array [
+    "deploy",
+  ],
+  "pkgroot",
+]
+`;
+
+exports[`when calling leiningen when calling lein wrapper methods when nextRelease is defined 'deploy' should call lein with the correct arguments 2`] = `
+Array [
+  "lein",
+  Array [
+    "deploy",
+  ],
+  "pkgroot",
+]
+`;
+
+exports[`when calling leiningen when calling lein wrapper methods when nextRelease is defined 'getVersion' should call lein with the correct arguments 1`] = `
+Array [
+  "lein",
+  Array [
+    "update-in",
+    ":plugins",
+    "conj",
+    "[lein-project-version \\"0.1.0\\"]",
+    "--",
+    "project-version",
+  ],
+  "pkgroot",
+]
+`;
+
+exports[`when calling leiningen when calling lein wrapper methods when nextRelease is defined 'getVersion' should call lein with the correct arguments 2`] = `
+Array [
+  "lein",
+  Array [
+    "update-in",
+    ":plugins",
+    "conj",
+    "[lein-project-version \\"0.1.0\\"]",
+    "--",
+    "project-version",
+  ],
+  "pkgroot",
+]
+`;
+
+exports[`when calling leiningen when calling lein wrapper methods when nextRelease is defined 'leinPackage' should call lein with the correct arguments 1`] = `
+Array [
+  "lein",
+  Array [
+    "jar",
+  ],
+  "pkgroot",
+]
+`;
+
+exports[`when calling leiningen when calling lein wrapper methods when nextRelease is defined 'leinPackage' should call lein with the correct arguments 2`] = `
+Array [
+  "lein",
+  Array [
+    "uberjar",
+  ],
+  "pkgroot",
+]
+`;
+
+exports[`when calling leiningen when calling lein wrapper methods when nextRelease is defined 'updateVersionInLeinProject' should call lein with the correct arguments 1`] = `
+Array [
+  "lein",
+  Array [
+    "change",
+    "version",
+    "set",
+    "\\"1.2.3\\"",
+  ],
+  "pkgroot",
+]
+`;
+
+exports[`when calling leiningen when calling lein wrapper methods when nextRelease is defined 'updateVersionInLeinProject' should call lein with the correct arguments 2`] = `
+Array [
+  "lein",
+  Array [
+    "change",
+    "version",
+    "set",
+    "\\"1.2.3\\"",
+  ],
+  "pkgroot",
+]
+`;

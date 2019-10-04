@@ -6,7 +6,7 @@ import { exec } from "./util";
  * Gets the path to the "lein" executable.
  * Could be extended in the future to try different locations.
  */
-const findCommand = async () => "lein"
+const findCommand = async () => "lein";
 
 export const updateVersionInLeinProject = async (
   { pkgRoot }: PluginConfig,
@@ -23,7 +23,6 @@ export const updateVersionInLeinProject = async (
 
 export const deploy = async (
   { pkgRoot }: PluginConfig,
-
   { logger, nextRelease }: Context
 ) => {
   if (nextRelease === undefined) {

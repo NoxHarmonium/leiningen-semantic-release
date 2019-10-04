@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1570156602143" clover="3.2.0">
+  <project timestamp="1570156602143" name="All files">
+    <metrics statements="66" coveredstatements="64" conditionals="18" coveredconditionals="14" methods="13" coveredmethods="13" elements="97" coveredelements="91" complexity="0" loc="66" ncloc="66" packages="2" files="7" classes="7"/>
+    <package name="src">
+      <metrics statements="66" coveredstatements="64" conditionals="18" coveredconditionals="14" methods="13" coveredmethods="13"/>
+      <file name="lein.ts" path="C:\Users\Sean Dawson\Development\leiningen-semantic-release\src\lein.ts">
+        <metrics statements="24" coveredstatements="24" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="28" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="65" count="2" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="prepare.ts" path="C:\Users\Sean Dawson\Development\leiningen-semantic-release\src\prepare.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="publish.ts" path="C:\Users\Sean Dawson\Development\leiningen-semantic-release\src\publish.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="types.ts" path="C:\Users\Sean Dawson\Development\leiningen-semantic-release\src\types.ts">
+        <metrics statements="14" coveredstatements="12" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="19" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+      </file>
+      <file name="util.ts" path="C:\Users\Sean Dawson\Development\leiningen-semantic-release\src\util.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="17" count="5" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+      <file name="verify-conditions.ts" path="C:\Users\Sean Dawson\Development\leiningen-semantic-release\src\verify-conditions.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.declarations">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="semantic-release__error.d.ts" path="C:\Users\Sean Dawson\Development\leiningen-semantic-release\src\declarations\semantic-release__error.d.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

@@ -13,8 +13,10 @@
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "lint-fix": "tslint --fix -p tsconfig.json -c tslint.json",
     "format-check": "prettier-check src/**/*",
-    "type-coverage": "type-coverage --strict --detail --ignore-catch",
-    "format": "prettier --write '{src,test}/**/*.{ts,tsx}'"
+    "type-coverage": "type-coverage --strict --detail --ignore-catch src",
+    "format": "prettier --write '{src,test}/**/*.{ts,tsx}'",
+    "test": "jest",
+    "check-all": "npm run format-check && npm run lint && npm run type-coverage && npm run test"
   },
   "repository": {
     "type": "git",
@@ -43,6 +45,7 @@
     "prettier": "^1.18.2",
     "prettier-check": "^2.0.0",
     "semantic-release": "^15.13.24",
+    "tempy": "^0.3.0",
     "ts-jest": "^24.1.0",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
@@ -54,6 +57,9 @@
   },
   "peerDependencies": {
     "semantic-release": "^15.13.24"
+  },
+  "typeCoverage": {
+    "atLeast": 96
   },
   "config": {
     "commitizen": {
