@@ -28,7 +28,7 @@
     "execa": "^2.0.4",
     "fp-ts": "^2.0.5",
     "io-ts": "^2.0.1",
-    "semver": "^6.3.0"
+    "semver": "^7.1.2"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.4",
