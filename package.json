@@ -48,7 +48,7 @@
     "prettier-check": "^2.0.0",
     "semantic-release": "^15.13.24",
     "tempy": "^0.3.0",
-    "ts-jest": "^24.1.0",
+    "ts-jest": "^26.1.0",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-eslint-rules": "^5.4.0",
